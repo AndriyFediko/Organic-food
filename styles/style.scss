@@ -1,0 +1,1298 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Rosario:wght@700&display=swap');
+$regularTextColor: #555;
+$titleColor: #222;
+$buttonColor: #09A66D;
+$DMSans: 'DM Sans', sans-serif;
+$Rosario: 'Rosario', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: $DMSans;
+    font-size: 20px;
+    user-select: none;
+    // overflow-x: hidden;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.slideThree{
+    display: none;
+}
+.slideTwo{
+    display: none;
+}
+button{
+    outline: none;
+}
+.pagePaddings{
+    padding: 0 8%;
+}
+.footer__content-mobile{
+    display: none;
+}
+.burger__menu{
+    display: none;
+}
+.wrap{
+    width: 100%;
+    min-height: 100vh;
+    .header__texture{
+        width: 100%;
+        height: 130px;
+        display: block;
+    }
+    header{
+        width: 100%;
+        height: 130px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        nav{
+            display: flex;
+            justify-content: space-between;
+            width: 450px;
+            font-size: 0.9em;
+            div{
+                color: $titleColor;
+                cursor: pointer;
+            }
+        }
+        img{
+            width: 60px;
+        }
+        .Regestar{
+            width: 350px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .headerImg{
+                width: 45px;
+                height: 45px;
+                background-color: #F3FBF8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                border-radius: 50%;
+                img{
+                    width: 60%;
+                }
+            }
+            button{
+                width: 170px;
+                height: 45px;
+                font-size: 0.9em;
+                font-weight: 400;
+                border: none;
+                color: #fff;
+                background-color: $buttonColor;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+        }
+        .burger{
+            width: 50px;
+            height: 50px;
+            background-color: #F3FBF8;
+            border-radius: 50%;
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            cursor: pointer;
+            div{
+                width: 60%;
+                height: 2px;
+                border-radius: 3px;
+                background-color: $buttonColor;
+            }
+        }
+    }
+    .homePage{
+        width: 100%;
+        background-image: url(../img/homePageBg.webp);
+        background-size: cover;
+        position: relative;
+        bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 70px 8% 50px 8%;
+        h2{
+            font-size: 3.3em;
+            font-family: $Rosario;
+            font-weight: 700;
+            color: $titleColor;
+        }
+        > p{
+            text-align: center;
+            font-weight: 400;
+            font-size: 1em;
+            color: $regularTextColor;
+            margin-top: 30px;
+            width: 705px;
+        }
+        .orderNow{
+            display: flex;
+            align-items: center;
+            margin-top: 60px;
+            p{
+                font-weight: 500;
+                color: $titleColor;
+                margin-right: 20px;
+            }
+            button{
+                width: 50px;
+                height: 50px;
+                background-color: $buttonColor;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                img{
+                    width: 50%;
+                }
+            }
+        }
+        .aboutBlock{
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            .aboutBlock__left{
+                width: 80%;
+                display: flex;
+                align-items: center;
+                img{
+                    width: 75%;
+                }
+            }
+            .aboutBlock__right{
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                >:not(article:first-child){
+                    margin-top: 20px;
+                }
+                article{
+                    width: 280px;
+                    height: 120px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    padding: 3% 7%;
+                    display: flex;
+                    justify-content: space-between;
+                    .statisticBlock__image{
+                        width: 30%;
+                        display: flex;
+                        align-items: center;
+                        .imageBackground{
+                            width: 60px;
+                            height: 60px;
+                            background-color: #F3FBF8;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+                                width: 50%;
+                            }
+                        }
+                    }
+                    .statisticBlock__text{
+                        width: 60%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: center;
+                        h3{
+                            font-size: 2em;
+                            color: #000;
+                            font-weight: 400;
+                        }
+                        p{
+                            color: #000;
+                            font-weight: 400;
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ourBenefistsPage{
+        width: 100%;
+        display: flex;
+        margin: 50px 0;
+        .ourBenefistsPage__left{
+            width: 50%;
+            h2{
+                font-size: 3em;
+                font-family: $Rosario;
+                color: $titleColor;
+            }
+            p{
+                color: $regularTextColor;
+                font-weight: 400;
+                font-size: 0.9em;
+                width: 626px;
+                margin-top: 20px;
+            }
+            article{
+                width: 550px;
+                height: 165px;
+                padding: 10% 5%;
+                display: flex;
+                margin-top: 20px;
+                .benefistsCard__image{
+                    width: 25%;
+                    display: flex;
+                    align-items: center;
+                    .imageBackground{
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        background-color: #F3FBF8;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 60%;
+                        }
+                    }
+                }
+                .benefistsCard__text{
+                    width: 75%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    h3{
+                        font-size: 1.20em;
+                    }
+                    p{
+                        width: 350px;
+                    }
+                }
+            }
+            article:nth-child(4){
+                background-color: #F3FBF8;
+                .benefistsCard__image{
+                    .imageBackground{
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+        .ourBenefistsPage__right{
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-size: cover;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .ExplorePage{
+        width: 100%;
+        padding: 70px 8% 70px 8%;
+        background-image: url(../img/ExplorePageBackground.webp);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        .ExplorePage__left{
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img{
+                width: 85%;
+            }
+        }
+        .ExplorePage__right{
+            width: 50%;
+            padding: 20px 0;
+            h2{
+                font-size: 3em;
+                font-family: $Rosario;
+                color: $titleColor;
+                width: 566px;
+            }
+            >p{
+                font-size: 0.9em;
+                color: $regularTextColor;
+                width: 566px;
+                margin-top: 50px;
+            }
+            .exploreNow{
+                display: flex;
+                align-items: center;
+                margin-top: 60px;
+                p{
+                    font-weight: 500;
+                    color: $titleColor;
+                    margin-right: 20px;
+                }
+                button{
+                    width: 50px;
+                    height: 50px;
+                    background-color: $buttonColor;
+                    border: none;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    img{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .revievsPage{
+        width: 100%;
+        margin: 100px 0;
+        display: flex;
+        .revievsPage__left{
+            width: 50%;
+            h2{
+                font-size: 3em;
+                font-family: $Rosario;
+                color: $titleColor;
+                width: 640px;
+            }
+            p{
+                font-size: 0.9em;
+                line-height: 150%;
+                width: 595px;
+                min-height: 162px;
+                color: $regularTextColor;
+                margin-top: 50px;
+            }
+            .revievsPage__left-bottom{
+                width: 555px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 50px;
+                .rate__block{
+                    h4{
+                        font-size: 1.8em;
+                        font-weight: 400;
+                        color: $titleColor;
+                    }
+                    img{
+                        width: 140px;
+                        margin-top: 20px;
+                    }
+                }
+                .slider__buttons{
+                    display: flex;
+                    align-items: flex-end;
+                    button{
+                        width: 55px;
+                        height: 55px;
+                        border: none;
+                        border-radius: 50%;
+                        margin-left: 20px;
+                        background-color: $buttonColor;
+                        cursor: pointer;
+                        img{
+                            width: 20%;
+                        }
+                    }
+                    button:first-Child{
+                        background-color: white;
+                        border: 2px solid #CCCCCC;
+                    }
+                }
+            }
+        }
+        .revievsPage__right{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            img{
+                width: 80%;
+            }
+        }
+    }
+    .ourAppPage{
+        width: 100%;
+        margin: 100px 0;
+        display: flex;
+        justify-content: space-between;
+        .ourAppPage__left{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 75%;
+            }
+        }
+        .ourAppPage__right{
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                width: 180px;
+                height: 45px;
+                background-color: #F3FBF8;
+                color: #333;
+                font-size: 0.9em;
+                border-radius: 25px;
+                border: none;
+                cursor: pointer;
+            }
+            h2{
+                font-size: 3em;
+                color: $titleColor;
+                font-family: $Rosario;
+                width: 534px;
+                margin-top: 30px;
+            }
+            p{
+                margin-top: 40px;
+                color: $regularTextColor;
+                width: 629px;
+            }
+            .buttonsBox{
+                display: flex;
+                margin-top: 50px;
+                img{
+                    width: 134px;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    footer{
+        background-color: #FCFEFD;
+        min-height: 435px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .info{
+            width: 24%;
+            img{
+                width: 85px;
+            }
+            p{
+                width: 390px;
+                color: $regularTextColor;
+                line-height: 150%;
+                margin-top: 25px;
+            }
+        }
+        .footer__content{
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            ul{
+                li:first-child{
+                    font-size: 1.5em;
+                    color: $titleColor;
+                    margin-top: 0;
+                }
+                li:first-child + li{
+                    margin-top: 35px;
+                }
+                li:not(li:first-child){
+                    cursor: pointer;
+                }
+                li{
+                    font-weight: 400;
+                    font-size: 1em;
+                    color: $regularTextColor;
+                    margin-top: 25px;
+                    font-weight: 500;
+                }
+            }
+            .contacts{
+                h3{
+                    font-size: 1.5em;
+                    color: $titleColor;
+                }
+                p{
+                    font-size: 1em;
+                    color: $regularTextColor;
+                    user-select: text;
+                    margin-top: 50px;
+                }
+                .socialNetworks{
+                    width: 70%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 25px;
+                    img{
+                        width: 25px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1512px){
+    // homepage & header
+    .wrap header{
+        height: 100px;
+    } 
+    .wrap .header__texture{
+        height: 100px;
+    }
+    .wrap header img{
+        width: 55px;
+    }
+    .wrap header .Regestar button{
+        width: 150px;
+        height: 40px;
+        font-size: 0.8em;
+    }
+    .wrap header .Regestar .headerImg{
+        width: 40px;
+        height: 40px;
+    }
+    .wrap header nav{
+        width: 390px;
+    }
+    .wrap header .Regestar{
+        width: 320px;
+    }
+    h2{
+        font-size: 2.5em !important;
+    }
+    p{
+        font-size: 0.9em !important;
+    }
+    .wrap .homePage > p{
+        width: 626px;
+    }
+    .wrap .homePage .orderNow{
+        margin-top: 30px;
+    }
+    .wrap .homePage .aboutBlock .aboutBlock__right article{
+        width: 250px;
+        height: 105px;
+    }
+    .wrap .homePage .aboutBlock .aboutBlock__right article .statisticBlock__text h3{
+        font-size: 1.6em;
+    }
+    .wrap .homePage .aboutBlock .aboutBlock__right article{
+        padding: 5% 10%;
+    }
+    .wrap .homePage .aboutBlock .aboutBlock__left img{
+        width: 85%;
+    }
+    .wrap .homePage{
+        padding: 70px 8% 0px 8%;
+    }
+    //home page & header
+    // ourBenefistsPage
+    .wrap .ourBenefistsPage .ourBenefistsPage__left p{
+        width: 551px;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article{
+        width: 510px;
+        height: 150px;
+    }
+    // ourBenefistsPage
+    // explorePage
+    .wrap .ExplorePage .ExplorePage__right h2{
+        width: 391px;
+    } 
+    .wrap .ExplorePage .ExplorePage__right > p{
+        margin-top: 40px;
+    }
+    //explorePage 
+    // revievsPage
+    .wrap .revievsPage .revievsPage__left h2{
+        width: 448px;
+    } 
+    .wrap .revievsPage .revievsPage__left p{
+        margin-top: 45px;
+    }
+    .wrap .revievsPage .revievsPage__left .revievsPage__left-bottom .rate__block h4{
+        font-size: 1.6em;
+    }
+    //revievsPage 
+    // app page
+    .wrap .ourAppPage .ourAppPage__right{
+        width: 65%;
+    }
+    .wrap .ourAppPage .ourAppPage__left{
+        width: 35%;
+    }
+    .wrap .ourAppPage .ourAppPage__right p{
+        width: 551px;
+    }
+    //app page 
+    // footer
+    .wrap footer .footer__content ul li:first-child{
+        font-size: 1.3em;
+    }
+    .wrap footer .footer__content ul li:first-child + li{
+        margin-top: 25px;
+    }
+    .wrap footer .footer__content ul li{
+        font-size: 0.9em;
+        margin-top: 20px;
+    }
+    .wrap footer .footer__content .contacts h3{
+        font-size: 1.3em;
+    }
+    .wrap footer .footer__content .contacts .socialNetworks{
+        width: 60%;
+    }
+    .wrap footer .footer__content .contacts .socialNetworks img{
+        width: 20px;
+    }
+    .wrap footer{
+        min-height: 370px;
+    }
+    .wrap footer .footer__content{
+        width: 53%;
+    }
+    .wrap footer .info p{
+        width: 313px;
+    }
+    .wrap footer .info img{
+        width: 75px;
+    }
+    //footer
+}
+@media screen and (max-width:1200px){
+    // home page & header
+    .wrap header nav{
+        font-size: 0.8em;
+        width: 310px;
+    }
+    .wrap .homePage{
+        bottom: 32px;
+    }
+    .wrap header .Regestar button{
+        width: 135px;
+        height: 37px;
+    }
+    .wrap header .Regestar{
+        width: 265px;
+    }
+    .wrap header .Regestar .headerImg{
+        width: 37px;
+        height: 37px;
+    }
+    h2{
+        font-size: 2em !important;
+    }
+    p{
+        font-size: 0.8em !important;
+    }
+    .wrap .homePage > p{
+        width: 557px;
+    }
+    .wrap .homePage .orderNow button{
+        width: 45px;
+        height: 45px;
+    }
+    .wrap .homePage .aboutBlock .aboutBlock__right article{
+        width: 210px;
+        height: 90px;
+    }
+    .wrap .homePage .aboutBlock .aboutBlock__right article .statisticBlock__image .imageBackground{
+        width: 50px;
+        height: 50px;
+    }
+    .wrap .homePage .aboutBlock .aboutBlock__right article .statisticBlock__text h3{
+        font-size: 1.5em;
+    }
+    .wrap .homePage .aboutBlock .aboutBlock__right > :not(article:first-child){
+        margin-top: 10px;
+    }
+    .wrap .homePage .aboutBlock .aboutBlock__left img{
+        width: 90%;
+    }
+    //home page & header
+    // ourBenefistsPage
+    .wrap .ourBenefistsPage .ourBenefistsPage__left p{
+        width: 388px;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article{
+        width: 377px;
+        height: 120px;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article .benefistsCard__image .imageBackground{
+        width: 70px;
+        height: 70px;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article .benefistsCard__text h3{
+        font-size: 1em;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left p{
+        margin-top: 5px;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article .benefistsCard__text p{
+        width: 199px;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article:last-child{
+        width: 377px;
+        height: 50px;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__right img{
+        width: 100%;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article .benefistsCard__text{
+        padding-left: 20px;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left{
+        width: 55%;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__right{
+        width: 45%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    //ourBenefistsPage
+    // explore page 
+    .wrap .ExplorePage .ExplorePage__right > p{
+        margin-top: 20px;
+        width: 420px;
+    }
+    .wrap .ExplorePage .ExplorePage__right .exploreNow{
+        margin-top: 30px;
+    }
+    //explore page
+    // revievsPage
+    .wrap .revievsPage .revievsPage__left p{
+        width: 429px;
+    } 
+    .wrap .revievsPage .revievsPage__left .revievsPage__left-bottom{
+        width: 400px;
+    }
+    .wrap .revievsPage .revievsPage__left .revievsPage__left-bottom .rate__block h4{
+        font-size: 1.3em;
+    }
+    .wrap .revievsPage .revievsPage__left .revievsPage__left-bottom .rate__block img{
+        width: 110px;
+        margin-top: 10px;
+    }
+    .wrap .revievsPage .revievsPage__left .revievsPage__left-bottom .slider__buttons button{
+        width: 50px;
+        height: 50px;
+    }
+    //revievsPage
+    // app page
+    .wrap .ourAppPage .ourAppPage__right h2{
+        width: 356px;
+        margin-top: 20px;
+    } 
+    .wrap .ourAppPage .ourAppPage__right p{
+        width: 371px;
+    }
+    .wrap .ourAppPage .ourAppPage__right p{
+        margin-top: 20px;
+    }
+    .wrap .ourAppPage .ourAppPage__left img{
+        width: 80%;
+    }
+    //app page 
+    // footer
+    .wrap footer .footer__content{
+        width: 60%;
+    } 
+    .wrap footer .info p{
+        width: 260px;
+        margin-top: 10px;
+    }
+    .wrap footer .info img{
+        width: 65px;
+    }
+    .wrap footer .footer__content ul li:first-child{
+        font-size: 1.1em;
+    }
+    .wrap footer .footer__content .contacts h3{
+        font-size: 1.1em;
+    }
+    .wrap footer .footer__content ul li:first-child + li{
+        margin-top: 20px;
+    }
+    .wrap footer .footer__content ul li{
+        margin-top: 15px;
+    }
+    .contacts{
+        width: 150px;
+    }
+    //footer
+}
+@media screen and (max-width:900px){
+    // home page & header
+    .wrap header :not(.burger, .logo)  *{
+        display: none !important;
+    }
+    .wrap header nav{
+        display: none;
+    }
+    .wrap header .burger{
+        display: flex !important;
+    }
+    .Regestar{
+        display: none !important;
+    }
+    .wrap .homePage .aboutBlock{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .homePage{
+        background-position: center;
+        padding: 70px 8% 70px 8%;
+    }
+    .wrap .homePage .aboutBlock .aboutBlock__left img{
+        width: 100%;
+    }
+    .wrap .homePage .aboutBlock .aboutBlock__right{
+        width: auto;
+    }
+    .wrap header{
+        height: 80px;
+    }
+    .wrap .header__texture{
+        height: 80px;
+    }
+    .wrap .homePage{
+        bottom: 40px;
+    }
+    //home page & header
+    // ourBenefistsPage
+    .wrap .ourBenefistsPage{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0 0 50px 0;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left{
+        width: auto;
+        margin-top: 50px;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__right{
+        width: 100%;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left p{
+        text-align: center;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article:last-child{
+        display: none;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__right img{
+        width: 80%;
+    }
+    //ourBenefistsPage
+    // explore page 
+    .wrap .ExplorePage{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .ExplorePage .ExplorePage__left{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .wrap .ExplorePage .ExplorePage__right h2{
+        text-align: center;
+    }
+    .wrap .ExplorePage .ExplorePage__right > p{
+        text-align: center;
+    }
+    .wrap .ExplorePage .ExplorePage__right .exploreNow{
+        display: flex;
+        justify-content: center;
+    }
+    .wrap .ExplorePage .ExplorePage__right .exploreNow button{
+        width: 45px;
+        height: 45px;
+    }
+    .wrap .ExplorePage .ExplorePage__right{
+        width: auto;
+        margin-top: 30px;
+    }
+    //explore page 
+    // revievsPage
+    .wrap .revievsPage{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .wrap .revievsPage .revievsPage__right{
+        width: 100%;
+        justify-content: center;
+    }
+    .wrap .revievsPage .revievsPage__right img{
+        width: 50%;
+    }
+    .wrap .revievsPage .revievsPage__left{
+        margin-top: 50px;
+        width: auto;
+    }
+    .wrap .revievsPage .revievsPage__left h2{
+        text-align: center;
+    }
+    .wrap .revievsPage .revievsPage__left p{
+        text-align: center;
+    }
+    .wrap .revievsPage .revievsPage__left .revievsPage__left-bottom{
+        width: 100%;
+    }
+    //revievsPage
+    // app page 
+    .wrap .ourAppPage{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .ourAppPage .ourAppPage__right{
+        width: auto;
+        margin-top: 50px;
+    }
+    .wrap .ourAppPage .ourAppPage__right > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .ourAppPage .ourAppPage__right h2{
+        text-align: center;
+    }
+    .wrap .ourAppPage .ourAppPage__right p{
+        text-align: center;
+    }
+    .wrap .ourAppPage .ourAppPage__right .buttonsBox img{
+        margin: 0 5px;
+    }
+    //app page 
+    // footer page
+    .contacts{
+        width: auto;
+    } 
+    .wrap footer .info{
+        width: auto;
+    }
+    .wrap footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap footer .info{
+        text-align: center;
+        margin-top: 80px;
+    }
+    .wrap footer .footer__content{
+        display: none;
+    }
+    .footer__content-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .dropdownSettins{
+        width: 280px;
+        height: 50px;
+        font-size: 1.0em;
+        color: $titleColor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .dropdownSettins img{
+        width: 13px;
+    }
+    .dropDown__content{
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    .dropDown__content ul li:first-child{
+        margin-top: 25px;
+    }
+    .dropDown__content ul li{
+        font-size: 0.9em;
+        color: $regularTextColor;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .dropDown__content p {
+        font-size: 0.8em !important;
+        margin-top: 10px;
+    }
+    .socialNetworks{
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        img{
+            width: 20px;
+        }
+    }
+    .wrap footer{
+        padding: 0 8% 75px 8%;
+    }
+    .dropDown__content__active{
+        height: 127px;
+    }
+    .DropdownArrow{
+        transition: 0.3s;
+    }
+    .DropdownArrow__active{
+        transform: rotate(180deg);
+    }
+    .burger__menu{
+        // height: calc(100vh - 80px);
+        height: 0;
+        width: 100%;
+        top: 80px;
+        position: fixed;
+        background-color: rgba(9, 166, 109, 0.97);
+        z-index: 9998;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    .burger__menu-active{
+        height: calc(100vh - 80px);
+        padding: 40px 0;
+    }
+    .burger__wrapper{
+        height: 400px;
+        width: 100%;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .burger__wrapper::-webkit-scrollbar{
+        width: 0px;
+    }
+    .burger__menu ul li {
+        color: white;
+        font-size: 1.2em;
+        margin: 30px 0;
+        text-align: center;
+        cursor: pointer;
+    }
+    .tools{
+        width: 180px;
+    }
+    .wrap .header__texture{
+        display: block;
+    }
+    .tools__top .burgerImg{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(241, 241, 241);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        cursor: pointer;
+    }
+    .tools__top{
+        display: flex;
+        justify-content: space-around;
+    }
+    .tools__top .burgerImg img{
+        width: 55%;
+        margin-right: 2px;
+    }
+    .tools__bottom{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    .tools__bottom button{
+        min-width: 120px;
+        height: 42px;
+        background-color: rgb(241, 241, 241);
+        font-size: 0.9em;
+        font-weight: 500;
+        border: none;
+        border-radius: 20px;
+        padding: 0 20px;
+        cursor: pointer;
+    }
+    .wrap header .burger div{
+        transition: 0.3s;
+        position: relative;
+    }
+    .wrap header .burger__active{
+        padding: 10px 0px 10px 1px;
+    }
+    .wrap header .burger .burgerTopLine__active{
+        top: 35%;
+        transform: rotate(45deg);
+    }
+    .wrap header .burger .burgerMiddleLine__active{
+        width: 0;
+        height: 0;
+    }
+    .wrap header .burger .burgerBottomLine__active{
+        bottom: 33%;
+        right: 2%;
+        transform: rotate(-45deg);
+    }
+    .scrollLock{
+        overflow: hidden;
+    }
+    .wrap .revievsPage .revievsPage__left .revievsPage__left-bottom{
+        margin-top: 15px;
+    }
+    //footer page
+}
+@media screen and (max-width:650px){
+    // home page & header
+    h2 {
+        font-size: 1.6em !important;
+    }
+    p{
+        font-size: 0.7em !important;
+    }
+    .wrap .homePage > p{
+        margin-top: 15px;
+    }
+    .wrap .homePage h2{
+        width: 100%;
+        text-align: center;
+    }
+    .wrap .homePage > p{
+        width: 100%;
+    }
+    //home page & header
+    // ourBenefistsPage
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 5% 5%;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left{
+        width: 100%;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article .benefistsCard__text h3{
+        text-align: center;
+        width: 100%;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article .benefistsCard__text{
+        padding-left: 0;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article .benefistsCard__text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article .benefistsCard__image{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left article .benefistsCard__text h3{
+        margin-top: 20px;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left p{
+        text-align: center;
+        margin-top: 15px;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left h2{
+        text-align: center;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__left p{
+        width: auto;
+    }
+    .wrap .ourBenefistsPage .ourBenefistsPage__right img{
+        width: 100%;
+    }
+    //ourBenefistsPage
+    // explore page
+    .wrap .ExplorePage .ExplorePage__left img{
+        width: 100%;
+    } 
+    .wrap .ExplorePage .ExplorePage__right h2{
+        width: 100%;
+    }
+    .wrap .ExplorePage .ExplorePage__right > p{
+        width: 100%;
+    }
+    //eplore page 
+    // revievsPage
+    .wrap .revievsPage .revievsPage__right img{
+        width: 80%;
+    }
+    .wrap .revievsPage .revievsPage__left h2{
+        width: 100%;
+    }
+    .wrap .revievsPage .revievsPage__left p{
+        width: 100%;
+    }
+    .wrap .revievsPage .revievsPage__left .revievsPage__left-bottom{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .revievsPage .revievsPage__left .revievsPage__left-bottom .rate__block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap .revievsPage .revievsPage__left .revievsPage__left-bottom .slider__buttons{
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .wrap .revievsPage .revievsPage__left .revievsPage__left-bottom .slider__buttons button{
+        margin: 0 10px;
+    }
+    //revievsPage
+    // app page
+    .wrap .ourAppPage .ourAppPage__left{
+        width: 60%;
+    } 
+    .wrap .ourAppPage .ourAppPage__right h2{
+        width: 100%;
+    }
+    .wrap .ourAppPage .ourAppPage__right p{
+        width: 100%;
+    }
+    .wrap .ourAppPage .ourAppPage__right .buttonsBox img{
+        width: 100px;
+    }
+    //app page
+    // footer page
+    .dropdownSettins{
+        width: 240px;
+    }
+    .dropDown__content{
+        width: 240px;
+    }
+    //footer page
+}
